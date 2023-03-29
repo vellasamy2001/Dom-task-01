@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <button onclick="submit()"> click </button>
+     <!-- <button id="btn"> click </button>
+        <uL id="ul-item"></uL> -->
+
+        <h1 id="head">hello</h1>
+          <h2 class="subhead"> world </h2>
+          <h2 class="subhead">one </h2> 
+         <h2 class="subhead">two</h2> 
+          <h2 class="subhead">three</h2>
+            <p class="suppara">welcome to my console</p>
+
+    <script>
+        
+       // id get
+    let head=document.getElementById("head");
+    console.log(head.innerText);
+// class get
+    let world=document.getElementsByClassName("subhead");
+      console.log(world);
+// class get
+    let subparas=document.getElementsByClassName("suppara");
+      console.log(subparas);
+// tag get
+  let tags=document.getElementsByTagName("h2");
+    console.log(tags[0].innerText);
+// query selector
+  let all=document.querySelector(".suppara");
+  console.log(all.innerText);
+    
+  function submit(){
+      
+   let divelement=document.createElement("div");
+      document.body.appendChild(divelement);
+        divelement.style.background="red";
+
+          let headelement=document.createElement("h1");
+          headelement.innerText="hello world";
+            divelement.appendChild(headelement);
+            headelement.style.background="lightgreen";
+            headelement.style.color="red";
+
+              
+          let paraelement=document.createElement("p");
+          paraelement.setAttribute('id','para');
+            paraelement.innerText="loreum ipsum";
+            divelement.appendChild(paraelement);
+
+     let divelement2=document.createElement("div");
+       divelement.appendChild(divelement2);
+  
+       let para2=document.createElement("p");
+       para2.setAttribute('class','next para');
+       para2.innerText="loreum ipsum2";
+      divelement2.appendChild(para2);
+      
+     console.log(divelement);
+ 
+      
+
+
+
+
+
+
+
+
+           }
+     
+
+  // let num=[1,2,3,4,5,6,7,8,9,10,11,12];
+  //    let ullist=document.getElementById("ul-item");
+  //      let btn=document.getElementById("btn");
+
+  //      btn.addEventListener("click",name);
+  //        function name(){
+  //         num.forEach(function(e){
+  //           let li=document.createElement("li");
+  //             li.innerText=e;
+  //               ullist.appendChild(li);
+  //                console.log(li);
+  //         });
+  //        }
+
+  
+    </script>
+    
+</body>
+</html>
